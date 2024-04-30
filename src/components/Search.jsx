@@ -36,7 +36,7 @@ const Search = () => {
           <div className="flex flex-row bg-black p-3 m-2">
             <div className="overflow-y-auto max-h-80">
               {filteredProducts.map((product, index) => (
-                <div key={index} className="flex flex-row text-white cursor-pointer bg-black shadow-slate-600 shadow-sm p-5 m-2">
+                <div key={index} className="flex flex-row text-white cursor-pointer bg-black shadow-slate-600 shadow-sm p-5 m-2 w-full">
                   <div className="flex justify-between">
                     <div className="w-1/3">
                       <img src={logo} alt="" />
@@ -62,7 +62,7 @@ const Search = () => {
           </div>
         )}
         {filteredProducts.length === 0 && data.trim() !== '' && (
-          <div className=" flex flex-row text-white cursor-pointer bg-black shadow-slate-600 shadow-sm p-3 mt-3">
+          <div className=" flex flex-row justify-center text-white cursor-pointer bg-black shadow-slate-600 shadow-sm p-5 w-full mt-3">
            <div className=" mt-1 text-sm">
             <p>No matches found. Add "{data}" to products.</p></div> 
             <button className="bg-orange-600 float-right p-1   ml-3 rounded-lg text-sm" onClick={handleAddProduct}>Add Product</button>
